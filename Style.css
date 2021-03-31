@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+#box{
+    margin-top: 10%;
+}
+
+#quote-box{
+
+  border-radius: 3px;
+  position: relative;
+  margin-left:-170px;
+  width: 500px;
+  padding: 40px 50px;
+  background-color: #fff;
+  
+}
+#button{
+    margin-top:7px;
+}
+#author{
+    float: right;
+}
+#tweet-quote{
+}
+#new-quote{
+    float: right;
+}
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+  }
+.blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /*position: absolute;*/
+    top: -25px;
+    left: 50px;*/
+  }
+  
