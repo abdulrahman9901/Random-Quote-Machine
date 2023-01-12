@@ -23,6 +23,7 @@ body{
     float: right;
 }
 #tweet-quote{
+    text-decoration: none;
 }
 #new-quote{
     float: right;
