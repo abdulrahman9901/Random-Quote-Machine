@@ -38,6 +38,20 @@ body{
 a:hover {
   color: white !important;
 }
+
+#tumblr-quote a:hover{
+  color: white !important;
+}
+
+#tumblr-quote button{
+  color: black !important;
+}
+
+#tumblr-quote button:hover {
+  background: black !important;
+  color: wheat !important;
+}
+
 .blockquote-custom-icon {
     width: 50px;
     height: 50px;
@@ -47,6 +61,10 @@ a:hover {
     justify-content: center;
    /*position: absolute;*/
     top: -25px;
-    left: 50px;*/
+    left: 50px;
   }
   
+#text {
+  font-size: larger;
+  font-family: "Times New Roman", Times, serif;
+}
