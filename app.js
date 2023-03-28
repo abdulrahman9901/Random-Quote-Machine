@@ -97,12 +97,18 @@ function newQuote(){
     },
     1000
   );
-
+/*
 setTimeout(() => {
   $('.bg-info').attr('style', `background-color: ${randcolor} !important`);
 }, 700);
-
-	document.getElementById('text').innerHTML = data.content;
+*/
+ $('.bg-info').animate(
+    {
+      backgroundColor: randcolor
+    },
+    1000
+  );		
+ document.getElementById('text').innerHTML = data.content;
   document.getElementById("author").innerHTML = "- " + data.author;
  })
 .catch(function(err) {
