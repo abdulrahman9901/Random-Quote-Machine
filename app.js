@@ -3,6 +3,32 @@
 let currentQuote='';
 let currentAuthor='';
 
+function randomRgbColor() {
+
+    let r = randomInteger(255);
+
+    let g = randomInteger(255);
+
+    let b = randomInteger(255);
+
+    return [r,g,b];
+
+}
+
+function randomHexColor() {
+
+    let [r,g,b] =randomRgbColor();
+
+    let hr = r.toString(16).padStart(2, '0');
+
+    let hg = g.toString(16).padStart(2, '0');
+
+    let hb = b.toString(16).padStart(2, '0');
+
+    return "#" + hr + hg + hb;
+
+}
+/*
 var colors = [
   '#16a085',
   '#27ae60',
@@ -17,7 +43,7 @@ var colors = [
   '#287268',
   '#73A857'
 ];
-
+*/
 document.getElementById('new-quote').addEventListener('click',newQuote);
 
 document.getElementById('tweet-quote').addEventListener('click',tweet);
@@ -35,21 +61,22 @@ function newQuote(){
   .then(function(data){    
   var color = Math.floor(Math.random() * colors.length);
   console.log(colors[color])
+  var randcolor = randomHexColor();
   $('html body').animate(
     {
-      backgroundColor: colors[color],
-      color: colors[color]
+      backgroundColor: randcolor,
+      color: randcolor
     },
     1000
   );
   $('.button').animate(
     {
-      backgroundColor: colors[color]
+      backgroundColor: randcolor
     },
     1000
   );
 
-  setTimeout($('.bg-info').attr('style', `background-color: ${colors[color]} !important`)
+  setTimeout($('.bg-info').attr('style', `background-color: ${randcolor} !important`)
   , 1000)
 
 	document.getElementById('text').innerHTML = data.content;
