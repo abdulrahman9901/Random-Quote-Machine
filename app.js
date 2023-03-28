@@ -33,7 +33,7 @@ let tryCount = 0;
     }
     tryCount++;
   } while (getBrightness({r,g,b}) > 128);
-  return color;
+
     let hr = r.toString(16).padStart(2, '0');
 
     let hg = g.toString(16).padStart(2, '0');
