@@ -69,7 +69,7 @@ if(currentAuthor== "Source Title")
 {return;}
   document.getElementById('tweet-quote').setAttribute(
     'href',
-    'https://twitter.com/intent/tweet?hashtags=ABA_Quotes_Generator&text=' +
+    'https://twitter.com/intent/tweet?hashtags=BQG&text=' +
       encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
   );
 };
@@ -83,7 +83,7 @@ function toTumblr(){
     {return;}
     document.getElementById('tumblr-quote').setAttribute(
       'href',
-      'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=ABA_Quotes_Generator&caption=' +
+      'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=BQG&caption=' +
         encodeURIComponent(currentAuthor) +
         '&content=' +
         encodeURIComponent(currentQuote) +
