@@ -67,14 +67,14 @@ function newQuote(){
   console.log(colors[color])
   var randcolor = randomHexColor();
   console.log(randcolor)
-  $('html body').animate(
+   $('html body').animate(
     {
       backgroundColor: randcolor,
       color: randcolor
     },
     1000
   );
-  $('.button').animate(
+  $('#a').animate(
     {
       backgroundColor: randcolor
     },
