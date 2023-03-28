@@ -20,9 +20,20 @@ function randomRgbColor() {
 }
 
 function randomHexColor() {
-
-    let [r,g,b] =randomRgbColor();
-
+   let [r,g,b] = [0,0,0];
+let tryCount = 0;
+  do {
+    if (tryCount > 1000) {
+      // Give up after 1000 tries
+      color = '#000000';
+      break;
+    }
+    for (let i = 0; i < 6; i++) {
+    [r,g,b] =randomRgbColor();
+    }
+    tryCount++;
+  } while (getBrightness({r,g,b}) > 128);
+  return color;
     let hr = r.toString(16).padStart(2, '0');
 
     let hg = g.toString(16).padStart(2, '0');
@@ -34,33 +45,8 @@ function randomHexColor() {
 }
 
 
-function getRandomDarkColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  let tryCount = 0;
-  do {
-    if (tryCount > 1000) {
-      // Give up after 1000 tries
-      color = '#000000';
-      break;
-    }
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    tryCount++;
-  } while (getBrightness(color) > 128);
-  return color;
-}
-
-function getBrightness(hex) {
-  const rgb = hexToRgb(hex);
+function getBrightness(rgb) {
   return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-}
-
-function hexToRgb(hex) {
-  const match = hex.slice(1).match(/.{2}/g);
-  const rgb = match.map(x => parseInt(x, 16));
-  return { r: rgb[0], g: rgb[1], b: rgb[2] };
 }
 
 var colors = [
@@ -95,7 +81,8 @@ function newQuote(){
   .then(function(data){    
   var color = Math.floor(Math.random() * colors.length);
   console.log("colors[color] : ",colors[color])
-  var randcolor = getRandomDarkColor();
+  var randcolor = randomHexColor();
+  randcolor === "#000000" ? colors[color] : randcolor
   console.log("randcolor : ",randcolor)
    $('html body').animate(
     {
