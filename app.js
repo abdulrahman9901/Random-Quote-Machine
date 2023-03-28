@@ -102,7 +102,7 @@ setTimeout(() => {
   $('.bg-info').attr('style', `background-color: ${randcolor} !important`);
 }, 700);
 */
- $('.bg-info').animate(
+ $('#info').animate(
     {
       backgroundColor: randcolor
     },
