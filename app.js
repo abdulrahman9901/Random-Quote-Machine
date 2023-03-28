@@ -3,6 +3,10 @@
 let currentQuote='';
 let currentAuthor='';
 
+function randomInteger(max) {
+    return Math.floor(Math.random()*(max + 1));
+}
+
 function randomRgbColor() {
 
     let r = randomInteger(255);
