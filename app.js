@@ -37,11 +37,18 @@ function randomHexColor() {
 function getRandomDarkColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
+  let tryCount = 0;
   do {
+    if (tryCount > 1000) {
+      // Give up after 1000 tries
+      color = '#000000';
+      break;
+    }
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
-  } while (getBrightness(color) > 120);
+    tryCount++;
+  } while (getBrightness(color) > 128);
   return color;
 }
 
