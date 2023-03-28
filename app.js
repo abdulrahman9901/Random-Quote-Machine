@@ -2,7 +2,7 @@
 
 let currentQuote='';
 let currentAuthor='';
-/*
+
 function randomInteger(max) {
     return Math.floor(Math.random()*(max + 1));
 }
@@ -32,7 +32,7 @@ function randomHexColor() {
     return "#" + hr + hg + hb;
 
 }
-*/
+
 
 function getRandomDarkColor() {
   const letters = '0123456789ABCDEF';
@@ -41,7 +41,7 @@ function getRandomDarkColor() {
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
-  } while (getBrightness(color) > 128);
+  } while (getBrightness(color) > 120);
   return color;
 }
 
@@ -87,9 +87,9 @@ function newQuote(){
   })
   .then(function(data){    
   var color = Math.floor(Math.random() * colors.length);
-  console.log(colors[color])
+  console.log("colors[color] : ",colors[color])
   var randcolor = getRandomDarkColor();
-  console.log(randcolor)
+  console.log("randcolor : ",randcolor)
    $('html body').animate(
     {
       backgroundColor: randcolor,
