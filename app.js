@@ -28,7 +28,7 @@ function randomHexColor() {
     return "#" + hr + hg + hb;
 
 }
-/*
+
 var colors = [
   '#16a085',
   '#27ae60',
@@ -43,7 +43,7 @@ var colors = [
   '#287268',
   '#73A857'
 ];
-*/
+
 document.getElementById('new-quote').addEventListener('click',newQuote);
 
 document.getElementById('tweet-quote').addEventListener('click',tweet);
@@ -62,6 +62,7 @@ function newQuote(){
   var color = Math.floor(Math.random() * colors.length);
   console.log(colors[color])
   var randcolor = randomHexColor();
+  console.log(randcolor)
   $('html body').animate(
     {
       backgroundColor: randcolor,
