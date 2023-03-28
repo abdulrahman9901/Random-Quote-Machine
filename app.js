@@ -100,7 +100,7 @@ function newQuote(){
 
 setTimeout(() => {
   $('.bg-info').attr('style', `background-color: ${randcolor} !important`);
-}, 1000);
+}, 700);
 
 	document.getElementById('text').innerHTML = data.content;
   document.getElementById("author").innerHTML = "- " + data.author;
