@@ -5,7 +5,9 @@ body{
 #box{
     margin-top: 10%;
 }
-
+#info{
+    background : #2f80ea ;
+}
 #quote-box{
 
   border-radius: 3px;
