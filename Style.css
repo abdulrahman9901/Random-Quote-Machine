@@ -12,12 +12,26 @@ body{
 
   border-radius: 3px;
   position: relative;
-  margin-left:-170px;
+  /*margin-left:-170px;*/
   width: 500px;
   padding: 40px 50px;
   background-color: #fff;
   
 }
+
+@media screen and (max-width : 400px) {
+  #quote-box {
+    max-width: 290px !important;
+  }
+}
+
+@media screen and (min-width : 400px) and (max-width : 600px) {
+  #quote-box {
+    max-width: 360px !important;
+  }
+}
+
+
 #button{
     margin-top:7px;
 }
