@@ -126,7 +126,7 @@ if(currentAuthor== "Source Title")
   document.getElementById('tweet-quote').setAttribute(
     'href',
     'https://twitter.com/intent/tweet?hashtags=BQG&text=' +
-      encodeURIComponent(' " ' + currentQuote + ' " '+ "%25250A" + currentAuthor)
+      encodeURIComponent(' " ' + currentQuote + ' " '+ '\n' + currentAuthor)
   );
 };
 
