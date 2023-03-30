@@ -48,7 +48,7 @@ body{
 @media screen and (min-width : 600px) and (max-width : 800px) {
 
    #box {
-        margin-top: 0%;
+        margin-top: 5%;
     }
   #text {
   font-size: large !important;
