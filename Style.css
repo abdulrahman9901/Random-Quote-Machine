@@ -45,6 +45,15 @@ body{
     }
 }
 
+@media screen and (min-width : 600px) and (max-width : 800px) {
+
+   #box {
+        margin-top: 0%;
+    }
+  #text {
+  font-size: large !important;
+    }
+}
 
 #button{
     margin-top:7px;
