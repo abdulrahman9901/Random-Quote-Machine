@@ -23,12 +23,18 @@ body{
   #quote-box {
     max-width: 290px !important;
   }
+    #box {
+        margin-top: 0%;
+    }
 }
 
 @media screen and (min-width : 400px) and (max-width : 600px) {
   #quote-box {
     max-width: 360px !important;
   }
+   #box {
+        margin-top: 0%;
+    }
 }
 
 
