@@ -26,6 +26,9 @@ body{
     #box {
         margin-top: 0%;
     }
+  #text {
+  font-size: large;
+    }
 }
 
 @media screen and (min-width : 400px) and (max-width : 600px) {
@@ -34,6 +37,9 @@ body{
   }
    #box {
         margin-top: 0%;
+    }
+  #text {
+  font-size: medium;
     }
 }
 
